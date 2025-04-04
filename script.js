@@ -13,7 +13,8 @@ let [randomCase, randomImage] = setRandomValues()
 
 function setRandomValues () {
   let randomCase = Math.floor(Math.random() * cases.length)
-  let randomImage = Math.floor(Math.random()*4 + 1)
+  let randomImage = Math.floor(Math.random() * 4)
+
   return [randomCase, randomImage]
 }
 
@@ -42,8 +43,8 @@ for (let i = 0; i < cases.length; i++) {
       h3.classList.add('incorrect')
     }
 
-    h2.classList.add('h2')
     [randomCase, randomImage] = setRandomValues()
+    h2.classList.add('h2')
     imageSelected.setAttribute('src', `Cases/${cases[randomCase].toLowerCase()}/${cases[randomCase].toLowerCase()}_${randomImage}.jpeg`);
       
   })
