@@ -6,7 +6,6 @@
   <script src="script.js" defer></script>
   <link rel="icon" href="icono.png">
   <style> 
-
     * {
       padding: 0;
       margin: 0;
@@ -26,55 +25,62 @@
       background-repeat: no-repeat;
     }
 
-    div img {
-      height: 400px;
-      border-radius: 20px;
-
-    }
-
-    header img {
-      height: 300px;
-      position: absolute;
-      margin: 50px 50px 50px 87vw;
-      padding: 50px;
-    }
-
-    header {
+    #stats {
       display: flex;
-      flex-direction: row;
+      justify-content: space-evenly;
       align-items: center;
-      justify-content: space-between;
-      position: absolute;
-      height: 25vh;
+      flex-direction: row;
+      width: 100%;
+      height: 50vh;
     }
 
     h1 {
       margin: 50px;
-      position: absolute;
       background-color: rgb(204, 39, 39);
       padding: 50px;
       border-radius: 10px;
       color: white;
+      font-size: 50px;
+    }
+
+    #stats_child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .h3 {
+      opacity: 0;
+    }
+
+    div img {
+      height: 400px;
+      border-radius: 8px;
+      margin-top: 20px;
     }
 
     .h2 {
-      margin: 70px;
-      position: absolute;
       background-color:  rgb(204, 39, 39);
       padding: 30px  50px;
       border-radius: 10px;
       color: white;
-      margin: 50px 50px 50px 78vw;
     }
 
-    
+    #img_prev {
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
 
     #buttons {
-      height: 30%;
-      width: 63%;
-      margin: 0 100px;
+      width: 80%;
+      height: 40vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
     }
-
 
     .buttons {
       padding: 30px;
@@ -93,9 +99,6 @@
     .buttons:hover {
       background-color: rgb(204, 39, 39);
     }
-    .h3 {
-      opacity: 0;
-    }
 
     .correct,.incorrect {
       padding: 20px;
@@ -112,57 +115,60 @@
       background-color: rgb(204, 39, 39);
     }
 
-    @media (max-width:720px) {
+    @media (max-width:1180px) {
       .buttons {
-        padding: 15px;
-        font-size: 15px;
-      }
-      div img {
-        height: 200px;
-        border-radius: 20px;
-      }
-
-      h1 {
         padding: 20px;
       }
-
-      #buttons {
-      height: 50%;
-      margin: 0 20px;
-      width: 90%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      div img {
+        height: 300px;
       }
-
-      #hero {
-        justify-content: space-around;
-      }
-
-      h2 {
-        padding: 10px;
-        font-size: 15px;
-        margin: 50px 50px 50px 70vw;
-      }
-
-      header img {
+      #img_prev {
         height: 200px;
-        position: absolute;
-        margin: 250px 50px 50px 60vw;
-        padding: 50px;
+      }
+      #h2 {
+        padding: 15px;
       }
     }
 
-    
+    @media (max-width:720px) {
+      .buttons {
+        padding: 20px;
+        font-size: 15px;
+      }
+      h1 {
+        padding: 20px;
+        font-size: 32px;
+      }
+      div img {
+        height: 150px;
+      }
+      #img_prev {
+        height: 100px;
+      }
+      #h2 {
+        padding: 5px;
+        font-size: 20px;
+      }
+      #buttons {
+        width: 100%;
+      }
+    }
   </style>
   <title>2-Sides PLL Trainer</title>
 </head>
 <body>
-  <header><h1 id="h1">0</h1><h2 id="h2"></h2><img id="img_prev"></header>
   <section id="hero">
-    <h3 class="h3" id="h3"></h3>
-    <div id="image"></div>
+    <div id="stats">
+      <h1 id="h1">0</h1>
+      <div id="stats_child">
+        <h3 class="h3" id="h3"></h3>
+        <div id="image"></div>
+      </div>
+      <div id="stats_child">
+        <h2 id="h2"></h2>
+        <img id="img_prev">
+      </div>
+     </div>
     <div id="buttons"></div>
   </section>
 </body>
