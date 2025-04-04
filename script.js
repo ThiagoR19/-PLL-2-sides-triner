@@ -13,7 +13,7 @@ let [randomCase, randomImage] = setRandomValues()
 
 function setRandomValues () {
   let randomCase = Math.floor(Math.random() * cases.length)
-  let randomImage = Math.floor(Math.random() * 4)
+  let randomImage = Math.floor(Math.random() * 4) + 1
 
   return [randomCase, randomImage]
 }
