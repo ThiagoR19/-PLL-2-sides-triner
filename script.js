@@ -42,6 +42,7 @@ for (let i = 0; i < cases.length; i++) {
       h3.classList.add('incorrect')
     }
 
+    h2.classList.add('h2')
     [randomCase, randomImage] = setRandomValues()
     imageSelected.setAttribute('src', `Cases/${cases[randomCase].toLowerCase()}/${cases[randomCase].toLowerCase()}_${randomImage}.jpeg`);
       
