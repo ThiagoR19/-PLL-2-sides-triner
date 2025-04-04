@@ -94,6 +94,24 @@
     .buttons:hover {
       background-color: rgb(204, 39, 39);
     }
+    .h3 {
+      opacity: 0;
+    }
+
+    .correct,.incorrect {
+      padding: 20px;
+      opacity: 1;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .correct {
+      background-color: rgb(35, 146, 10);
+    }
+
+    .incorrect {
+      background-color: rgb(204, 39, 39);
+    }
 
     @media (max-width:720px) {
       .buttons {
@@ -144,6 +162,7 @@
 <body>
   <header><h1 id="h1">0</h1><h2 id="h2"></h2><img id="img_prev"></header>
   <section id="hero">
+    <h3 class="h3" id="h3"></h3>
     <div id="image"></div>
     <div id="buttons"></div>
   </section>

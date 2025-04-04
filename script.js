@@ -2,6 +2,7 @@ const buttons = document.getElementById('buttons')
 const image = document.getElementById('image')
 const h1 = document.getElementById('h1')
 const h2 = document.getElementById('h2')
+const h3 = document.getElementById('h3')
 const image_prev = document.getElementById('img_prev')
 
 let points = 0
@@ -28,9 +29,17 @@ for (let i = 0; i < cases.length; i++) {
       h1.innerHTML = points
       h2.innerHTML = `El anterior era: ${cases[randomCase]}`  
       image_prev.setAttribute('src', `Cases/${cases[randomCase].toLowerCase()}/${cases[randomCase].toLowerCase()}_${randomImage}.jpeg`);
+      h3.innerHTML = "¡¡Correcto!!"
+      h3.classList.remove('h3')
+      h3.classList.remove('class','incorrect')
+      h3.classList.add('correct')
     } else {
       h2.innerHTML = `El anterior era: ${cases[randomCase]}` 
       image_prev.setAttribute('src', `Cases/${cases[randomCase].toLowerCase()}/${cases[randomCase].toLowerCase()}_${randomImage}.jpeg`);
+      h3.innerHTML = "¡¡Incorrecto!!"
+      h3.classList.remove('h3')
+      h3.classList.remove('correct')
+      h3.classList.add('incorrect')
     }
 
     [randomCase, randomImage] = setRandomValues()
